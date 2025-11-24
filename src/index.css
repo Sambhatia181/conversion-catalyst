@@ -40,13 +40,6 @@ All colors MUST be HSL.
 
     --gradient-primary: linear-gradient(135deg, hsl(220, 70%, 20%), hsl(220, 80%, 30%));
     --gradient-hero: linear-gradient(180deg, hsl(0, 0%, 5%) 0%, hsl(220, 70%, 8%) 100%);
-    --gradient-mesh: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.4) 0px, transparent 50%),
-                     radial-gradient(at 97% 21%, hsla(0, 85%, 55%, 0.4) 0px, transparent 50%),
-                     radial-gradient(at 52% 99%, hsla(220, 70%, 30%, 0.4) 0px, transparent 50%),
-                     radial-gradient(at 10% 29%, hsla(0, 85%, 45%, 0.4) 0px, transparent 50%),
-                     radial-gradient(at 97% 96%, hsla(220, 80%, 40%, 0.4) 0px, transparent 50%),
-                     radial-gradient(at 33% 50%, hsla(215, 90%, 50%, 0.4) 0px, transparent 50%),
-                     radial-gradient(at 79% 53%, hsla(0, 80%, 50%, 0.4) 0px, transparent 50%);
     --shadow-glow: 0 0 80px hsla(0, 85%, 55%, 0.15);
     --shadow-card: 0 20px 60px hsla(0, 0%, 0%, 0.5);
   }
@@ -59,43 +52,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  @keyframes border-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .animate-border {
-    position: relative;
-    background: hsl(var(--card));
-    background-clip: padding-box;
-  }
-
-  .animate-border::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    padding: 2px;
-    background: conic-gradient(
-      from 0deg,
-      transparent 0%,
-      hsla(0, 85%, 55%, 0.8) 25%,
-      hsla(0, 85%, 65%, 1) 50%,
-      hsla(0, 85%, 55%, 0.8) 75%,
-      transparent 100%
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    animation: border-spin 3s linear infinite;
-    pointer-events: none;
   }
 }

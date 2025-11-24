@@ -9,9 +9,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-foreground flex items-center gap-2">
-            <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent via-red-500 to-accent">A</span>
-            <span>utonyze</span>
+          <div className="text-2xl font-bold text-foreground">
+            AI<span className="text-accent">Scale</span>
           </div>
           
           <div className="hidden md:flex items-center gap-8">
