@@ -51,7 +51,7 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <Card 
               key={index} 
-              className="bg-card border-border p-6 hover:border-accent/50 transition-all duration-300 group"
+              className="animate-border bg-card border-border p-6 hover:border-accent/50 transition-all duration-300 group"
             >
               <div className="mb-4 inline-flex p-2 rounded-lg bg-primary/10 group-hover:bg-accent/10 transition-colors">
                 <benefit.icon className="w-6 h-6 text-accent" />
